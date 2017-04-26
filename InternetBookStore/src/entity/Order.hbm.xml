@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-5 12:32:08 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="entity.Order" table="ORDERS">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="native"/>
+  </id>
+  <many-to-one class="entity.User" fetch="join" name="user">
+   <column name="USER"/>
+  </many-to-one>
+  <many-to-one class="entity.Book" fetch="join" name="book">
+   <column name="BOOK"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="committed" type="boolean">
+   <column name="COMMITTED"/>
+  </property>
+  <property generated="never" lazy="false" name="address" type="java.lang.String">
+   <column name="ADDRESS"/>
+  </property>
+  <property generated="never" lazy="false" name="tel" type="java.lang.String">
+   <column name="TEL"/>
+  </property>
+  <property generated="never" lazy="false" name="confirmed" type="boolean">
+   <column name="CONFIRMED"/>
+  </property>
+  <property generated="never" lazy="false" name="done" type="boolean">
+   <column name="DONE"/>
+  </property>
+  <property generated="never" lazy="false" name="timeStamp" type="java.util.Date">
+   <column name="TIMESTAMP"/>
+  </property>
+ </class>
+</hibernate-mapping>

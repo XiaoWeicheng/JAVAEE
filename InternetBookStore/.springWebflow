@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.8.2.201610040608-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/temp.xml</file>
+			<name><![CDATA[temp]]></name>
+			<beans-config><![CDATA[1:BeansModel|2:InternetBookStore|3:src/applicationContex.xml]]></beans-config>
+		</config>
+	</configs>
+</webflow-project-description>

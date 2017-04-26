@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+ "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.multipart.maxSize" value="2097152">constant</constant>
+    <constant name="i18n.encoding" value="UTF-8">constant</constant>
+    <constant name="struts.convention.result.path" value="/WEB-INF/content">constant</constant>
+    <constant name="struts.convention.package.locators" value="action">constant</constant>
+    <constant name="struts.server.static.browserCache" value="false">constant</constant>
+    <constant name="struts.configuration.xml.reload" value="true">constant</constant>
+    <package name="default" namespace="/" extends="struts-default">
+      <action name="register" class="userAction" method="register" >
+            <result name="failure">Register/register_failure.jsp</result>
+            <result name="success">Register/register_success.jsp</result>           
+      </action>
+      <action name="login" class="userAction" method="login" >
+            <result name="failure">Login/login_failure.jsp</result>
+            <result name="success">Login/login_success.jsp</result>           
+      </action>
+      <action name="getback" class="userAction" method="getBack" >
+            <result name="failure">GetBackPW/getback_failure.jsp</result>
+            <result name="success">GetBackPW/getback_success.jsp</result>           
+      </action>
+      <action name="setinfo" class="userAction" method="setInfo" >
+            <result name="result">Set/setinfo_result.jsp</result>          
+      </action>
+      <action name="logout" class="userAction" method="logout" >
+            <result name="next" type="redirectAction">query</result>  
+      </action>
+    </package>
+</struts>
